@@ -120,6 +120,30 @@
           "result": { "ok": true, "connector": "router", "action": "targets", "targets": ["host"], "nodes": [] }
         }
       ]
+    },
+    "doctor/query/report": {
+      "version": "v1",
+      "effect": "query",
+      "reversible": false,
+      "inp": {},
+      "out": {
+        "ok": "const:true",
+        "connector": "const:router",
+        "version": "str",
+        "status": "const:ready"
+      },
+      "errors": [],
+      "examples": [
+        {
+          "payload": {},
+          "result": {
+            "ok": true,
+            "connector": "router",
+            "version": "0.2.1",
+            "status": "ready"
+          }
+        }
+      ]
     }
   },
   "wires": []
