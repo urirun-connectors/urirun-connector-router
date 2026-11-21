@@ -3,6 +3,10 @@
 """urirun-connector-router - URI-schema routing and router:// diagnostics."""
 from __future__ import annotations
 
+from urirun_connector_router.decision_fallback import (
+    build_decision_payload,
+    decide_uri_route,
+)
 from urirun_connector_router.routing import (
     accept_plan,
     diagnose_targets,
@@ -28,9 +32,11 @@ def urirun_bindings():
 
 
 __all__ = [
+    "accept_plan",
+    "build_decision_payload",
+    "decide_uri_route",
     "diagnose_plan",
     "diagnose_targets",
-    "accept_plan",
     "execution_layers",
     "parse_uri",
     "registry_from_routes",
